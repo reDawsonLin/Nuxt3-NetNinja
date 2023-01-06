@@ -1,16 +1,24 @@
 <script setup>
-// definePageMeta({
-//   layout: "default",
-// });
+// get request
+// const { data } = await useFetch("/api/ninja", { query: { name: "mario" } });
+
+// post request
+const { data } = await useFetch("/api/ninja", {
+  method: "post",
+  query: { name: "mario" },
+  body: { age: 30 },
+});
 </script>
 
 <template>
-    <h2>About</h2>
-    <p>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam facilis, a
-      aperiam omnis possimus saepe et repellat. Ipsam assumenda obcaecati
-      recusandae molestiae ipsum! Dolorum quis, magni ratione vel commodi ipsam?
-    </p>
+  <h2>About</h2>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam facilis, a
+    aperiam omnis possimus saepe et repellat. Ipsam assumenda obcaecati
+    recusandae molestiae ipsum! Dolorum quis, magni ratione vel commodi ipsam?
+  </p>
+
+  <div>{{ data }}</div>
 </template>
 
 <style lang="scss" scoped>
