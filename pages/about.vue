@@ -3,11 +3,14 @@
 // const { data } = await useFetch("/api/ninja", { query: { name: "mario" } });
 
 // post request
-const { data } = await useFetch("/api/ninja", {
-  method: "post",
-  query: { name: "mario" },
-  body: { age: 30 },
-});
+// const { data } = await useFetch("/api/ninja", {
+//   method: "post",
+//   query: { name: "mario" },
+//   body: { age: 30 },
+// });
+
+// currency
+const { data } = await useFetch("/api/currency/GBP");
 </script>
 
 <template>
