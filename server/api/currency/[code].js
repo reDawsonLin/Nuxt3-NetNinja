@@ -2,12 +2,12 @@ export default defineEventHandler(async (event) => {
   const { code } = event.context.params;
   const { currencyKey } = useRuntimeConfig();
 
-  const uri = `https://api.currencyapi.com/v3/currencies`;
+  // const uri = `https://api.currencyapi.com/v3/currencies`;
 
-  const { data } = await $fetch(uri, {
+  const { data } = await $fetch("https://api.currencyapi.com/v3/currencies", {
     query: {
-      currency: code,
-      apiKey: currencyKey,
+      currencies: code,
+      apikey: currencyKey,
     },
   });
 
